@@ -257,7 +257,7 @@ const Index = () => (
           </AboutHero>
           <AboutDesc>
             Want to know more, check my github, twitter or facebook profile.
-            
+
           </AboutDesc>
         </Inner>
       </Content>
@@ -282,13 +282,13 @@ const Index = () => (
           <Title>Get in touch</Title>
           <ContactText>
             Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-            <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+            <a href="https://twitter.com/nvega">Twitter</a> &{' '}
+            <a href="https://www.linkedin.com/in/nvegamarrero/">LinkedIn</a>
           </ContactText>
         </Inner>
         <Footer>
           &copy; 2018 by NVEGA.{' '}
-          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
+          <a href="https://github.com/nvega">Github Repository</a>.
         </Footer>
       </Content>
       <Divider speed={0.1} offset={4}>
