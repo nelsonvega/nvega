@@ -19,6 +19,7 @@ module.exports = {
         name: 'images',
       },
     },
+
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -45,6 +46,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/blog/posts`,
+        name: "markdown-pages",
+      },
+    },
+    `gatsby-transformer-remark`,
     /* Must be placed at the end */
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',

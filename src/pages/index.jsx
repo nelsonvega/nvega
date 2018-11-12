@@ -158,9 +158,9 @@ const Index = () => (
       <Content speed={0.4} offset={0}>
         <Hero>
           <BigTitle>
-            Hello, <br /> I'm John Doe.
+            Hello, <br /> I'm Nelson Vega.
           </BigTitle>
-          <Subtitle>I'm creating noice web experiences for the next generation of consumer-facing companies.</Subtitle>
+          <Subtitle>I'm creating novice mobile and web experiences for the next generation of consumer-facing companies.</Subtitle>
         </Hero>
       </Content>
       <DividerMiddle
@@ -174,32 +174,32 @@ const Index = () => (
           <Title>Projects</Title>
           <ProjectsWrapper>
             <ProjectCard
-              title="Freiheit"
-              link="https://www.behance.net/gallery/58937147/Freiheit"
+              title="Xamarin Squad"
+              link="https://xamarinsquad.com"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
-              This project is my entry to Adobe's #ChallengeYourPerspective contest.
+              This is the place where I share my thoughts and finding about Xamarin
             </ProjectCard>
             <ProjectCard
-              title="Harry Potter"
-              link="https://www.behance.net/gallery/52915793/Harry-Potter"
+              title="Kleio Technology"
+              link="https://KleioTechnology.com"
               bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
-              I entered the DOCMA 2017 award with this Harry Potter inspired image.
+            Our technoogy consulting company where we build cool stuff for our clients
             </ProjectCard>
             <ProjectCard
-              title="Tomb Raider"
-              link="https://www.behance.net/gallery/43907099/Tomb-Raider"
+              title="Happy Techie"
+              link="happytechie.co"
               bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
             >
-              Recreation of a Tomb Raider Wallpaper (Fan Art)
+              E-commerce platform
             </ProjectCard>
             <ProjectCard
-              title="Eagle"
-              link="https://www.behance.net/gallery/38068151/Eagle"
+              title="MilesSoS"
+              link="https://milessos.com"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
-              A fantasy image manipulation relocating the habitat of wild animals.
+              Mobile app for milestracking
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
@@ -291,7 +291,7 @@ const Index = () => (
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2018 by Gatsby Starter Portfolio Cara.{' '}
+          &copy; 2018 by NVEGA.{' '}
           <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
         </Footer>
       </Content>
