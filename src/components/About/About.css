@@ -1,0 +1,36 @@
+.AboutContiner{
+    height: 90vh;
+    background: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GridAlign{
+    display: flex;
+    background: #f2f1f1;
+    height: 100%;
+}
+.ContinerStyleleft{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ContinerStyleRiht{
+    display: flex;
+     padding: 4rem;
+    flex-direction: column;
+}
+.Heading{
+    margin: 0;
+    font-size: 5rem;
+}
+.desc{
+    color: #959696;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 20px;
+    line-height: 35px;
+    margin-bottom: 0px;padding-bottom: 40px;
+}
+

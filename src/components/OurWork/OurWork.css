@@ -1,0 +1,39 @@
+.OurWorkContainer{
+    height: 90vh;
+    background: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: flex;
+    flex-direction: column; */
+}
+.header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.descOurwork{
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.desctext{
+    color: #959696;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 20px;
+    line-height: 35px;
+    margin-bottom: 0px;padding-bottom: 40px;
+}
+.HeadtextStyle{
+    color:#a5a5a5;
+    font-size: 100px;
+    text-align: center;
+}
+.DescStyle{
+    text-align: center;
+    width: 55%;
+}

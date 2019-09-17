@@ -1,0 +1,60 @@
+.ContactUSContainer{
+    height: 90vh;
+}
+.BackGroundImageContact{
+    background-image: url('../../images/footer_bg.png'); 
+    background-size: cover;
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.ContentContcact{
+    display:flex;
+    width: 40rem;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+    text-align: center;
+}
+.ButtonStyleContact:hover{
+    background-color: white !important;
+    color: #000;
+    border: 2px solid white;
+}
+.fontstyledesc{
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.ButtonStyleContact{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    border: 2px solid #b87106;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #b87106;
+    padding: 1rem;
+    width:25%
+ }
+ .Heading{
+     margin: 0;
+     font-size: 7rem;
+     color: white;
+ }
+ @media only screen and (max-width: 600px) {
+  .ButtonStyleContact{
+    width: auto;
+  }
+  .ContentContcact{
+    width: 100%;
+  }
+  .Heading{
+    font-size: 3rem;
+  }
+  .fontstyledesc{
+    font-size: 1.2rem;
+  }
+
+}
