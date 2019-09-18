@@ -4,6 +4,8 @@ import Home from '../components/Home/Home'
 import About from '../components/About/About'
 import OurWork from '../components/OurWork/OurWork'
 import ContactUS from '../components/Contactus/Contactus'
+import Vlog from '../components/Vlog/Vlog'
+import HomeBlog from '../components/HomeBlog/HomeBlog'
 import Footer from '../components/Footer'
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
@@ -18,6 +20,8 @@ const IndexPage = () => {
          <Home/>
           <About/>
          <OurWork/>
+         <Vlog/>
+         <HomeBlog/>
          <ContactUS/>
        <Footer/>
       </Layout>

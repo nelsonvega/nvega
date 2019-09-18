@@ -1,0 +1,66 @@
+.VlogContiner{
+    height: 90vh;
+}
+.HeadVlog{
+    margin: 0;
+    font-size: 5.6rem;
+}
+.date{
+    color:white;
+}
+.ImageHover:hover{
+    transform: scale(1.1);
+    transition: .9s all;
+}
+.TextStyleCard{
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    text-align: start;
+    width: 10rem;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+.short_desc{
+    color:white;
+}
+.ImageStyle{
+    height:45%;
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row
+}
+.VlogButtonStyle{
+    width: 16%;
+    color: black;
+    border: 2px solid black;
+    background: transparent;
+    padding: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+}
+.VlogButtonStyle:hover{
+    background: #d5b004;
+    color:white;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+@media only screen and (max-width: 600px) {
+    .HeadVlog{
+        margin: 0;
+        font-size: 3rem;
+    }
+    .VlogButtonStyle{
+        width: 50%;
+        padding: 1rem;
+    }
+    .TextStyleCard{
+        width: auto;
+        margin: 0;
+    }
+}

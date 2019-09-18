@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   `)
 const Scroll=(MenuData)=>{
   console.info(MenuData)
-  if(MenuData==='About'||MenuData==='Our Work'||MenuData==='Home'||MenuData==='Contact'){
+  if(MenuData==="Vlog" ||MenuData==="Blog"  || MenuData==='About'||MenuData==='Our Work'||MenuData==='Home'||MenuData==='Contact'){
     let elmnt = document.getElementById(MenuData);
     elmnt.scrollIntoView({ block: 'end',  behavior: 'smooth' });
   }else{
