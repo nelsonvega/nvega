@@ -8,6 +8,15 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+.ContentStyleMobileVlog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
 .ButtonStyle:hover{
     background-color: white !important;
     color: #000;

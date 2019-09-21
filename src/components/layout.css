@@ -5,12 +5,88 @@
 * {
     font-family: 'Amatic SC', cursive;
 }
+
+.BlogListRealContent{
+    width: 100%;
+    height: 70vh;
+    background: #e7e5e5;
+    display: flex;
+    justify-content: center;
+}
+.IconSTyleVlog {
+  font-size: 2.5rem !important;
+  color: #fff;
+}
+.AboutBlogAuther{
+  font-family: 'Open Sans', sans-serif;
+  color:#f13624;
+  font-weight: 400;
+}
+.NormalFont{
+  font-family: 'Open Sans', sans-serif;
+}
+.vlog_textBlogList {
+  color: #2d2e30;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 100px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.DateTime{
+    height: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.MainBodyBolgList{
+  width:80%;
+}
+.MainBodyBolgListchild{
+  width:95%;
+}
+.BlogContentStyle{
+  width: 85%;
+  margin-left: 8%
+}
+.BlogListImage{
+   width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: inherit;
+    margin: 25px auto;
+}
+.BlOlistHeading{
+  font-weight: 600;
+  margin: 35px 0px;
+  font-size: 55px;
+}
+.BlogList{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  color: #666;
+  margin: 30px 0 0;
+  text-align: justify;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.full_heading {
+  font-size: 44px;
+  color: #b4975a;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  margin-bottom: 0px;
+}
 .ClassOne{
-  height: 15vh;
+  height: 18vh;
   background: transparent;
   width:100%;
   position: fixed;
   transition: all 0.3s ease-out;
+  z-index: 1;
 }
 .ClassTwo{
   height: 11vh;
@@ -18,7 +94,8 @@
   transition: all 0.3s ease-out;
   top: 0;
   background: black;
-  position: fixed
+  position: fixed;
+  z-index: 1;
 }
 .Index{
   transition: all 1s ease-in;
@@ -64,7 +141,9 @@
   display: inline-block;
   cursor: pointer;
 }
-
+.DynamicFontBlog{
+  font-size: 2.5rem;
+}
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
@@ -84,8 +163,159 @@
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
+.BlogBg{
+  background-image: url('../images/Blog_header.jpg'); 
+  background-size: cover;
+  height: 70vh;
+  background-repeat: no-repeat;
+}
+.BlogIntroImage{
+  width: 80%;
+  object-fit: cover;
+  height: 75%
+}
+#Bloger{
+  height: inherit;
+  display: flex;
+  flex-direction: column
+}
+.ImgeBlogStyle{
+  height: 60vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ImgeBlogStyleText{
+  height: 55vh;
+  display: flex;
+  padding-left: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.ReadMeBtn{
+    width: 30%;
+    color: #303133;
+    background-color: transparent;
+    border: 1px solid #303133;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 1rem;
+    transition: .3s all;
+    font-weight: 1rem;
+}
+.BlogPost{
+  display: flex;
+  flex-direction: row
+}
+.EffectImageDiv{
+  height:90vh;
+  align-items: center;
+}
+.FlexDir{
+flex-direction: row
+}
+.ReadMeBtn:hover{
+ background: black;
+ color: #fff;
+}
+.EffectImage { 
+  opacity:0;
+ }
+ .CardStyle:hover .EffectImage { 
+  opacity:1;
+  transition: .4s ease-in-out .0s;
+  transform: translateX(60px); 
+ }
+.EffectImageDiv:hover .EffectImage { 
+  opacity:1;
+  transition: .4s ease-in-out .0s;
+  transform: translateX(60px); 
+ }
+.ContentDecBlog{
+     font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+.BlogText{
+  font-size: 6rem;
+  color: white;
+  margin-left: 9rem;
+}
+.AutherHeadFontBlog{
+  color: #f13624;
+    text-decoration: none;
+    position: relative;
+    padding: 0px 17px;
+    line-height: 2.5;
+    font-family: 'Open Sans', sans-serif;
+}
+.RealtedbLOGhEADER{
+    height: 30vh;
+    background: rgb(231, 229, 229);
+    display: flex;
+    justify-content: cali;
+    justify-content: center;
+    align-items: center;
+}
+.MarginMain{
+  height: 20vh;
+  background: #f2f1f1;
+}
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  .MainBodyBolgListchild{
+    width:100%;
+  }
+  .BlogContentStyle{
+    margin-left: 0;
+    width: 100%;
+  }
+  .BlogListRealContent{
+    height: auto;
+  }
+  
+  .vlog_textBlogList{
+    font-size: 50px;
+  }
+  .RealtedbLOGhEADER{
+    height: 20vh;
+  }
+  .DateTime{
+    height: auto;
+    width: 100%;
+    display: block;
+    text-align: center
+  }
+  .MainBodyBolgList{
+    width:100%
+  }
+  .EffectImageDiv{
+    align-items: center;
+  }
+  .FlexDir{
+    flex-direction: column
+    }
+  .EffectImage{
+    visibility: hidden;
+  }
+  .BlogIntroImage{
+    width: 100%;
+  }
+  .ReadMeBtn{
+    width: 70%;
+  }
+  .ImgeBlogStyle{
+    padding: 1rem;
+  }
+ 
+  .BlogBg{
+    background-position: center;
+  }
   .ClassOne{
     background: black;
     height: 10vh;
@@ -122,7 +352,14 @@
   font-size: 1rem;
   color: white;
 }
+
 @media only screen and (max-width: 992px) {
+  .ImgeBlogStyleText{
+    height: 75vh;
+  }
+  .DynamicFontBlog{
+    font-size: 2rem;
+  }
   .HeaderMenu{
     display: none;
   }
@@ -156,10 +393,15 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
    .ClassOne{
-    height: 15vh;
+    height: 18vh;
   }
+ 
 }
 @media only screen and (max-width: 600px) {
+  .BlogText{
+    font-size: 4rem;
+  }
+ 
   .FooterStyle{
    padding: 1rem;
    margin: 0;

@@ -1,6 +1,7 @@
 import React,{ useState, useEffect }  from "react"
 import Button from '@material-ui/core/Button';
-const Header = ({ siteTitle,Scroll }) => {
+const Header = ({ siteTitle,Scroll,ScrollID}) => {
+  console.info(ScrollID)
   const UpdateScroll=(data)=>{
     Scroll(data)
     let Des=document.getElementById('container')
@@ -11,8 +12,6 @@ const Header = ({ siteTitle,Scroll }) => {
       setShowMenu(ShowMenu=!ShowMenu)
       Des.classList.toggle("change")
     }
-
-     
   }
   const [scrollY, setScrollY] = useState('ClassOne');
   let [ShowMenu, setShowMenu] = useState(false);
@@ -20,10 +19,11 @@ const Header = ({ siteTitle,Scroll }) => {
    e.currentTarget.classList.toggle("change");
    setShowMenu(ShowMenu=!ShowMenu)
   }
-  const MenuData=['Home','About','Our Work','Vlog','Blog','Contact']
+  const MenuData=['Home','About','My Work','Vlog','Blog','Contact']
   const LogoImagedata=['facebook.png','twitter.png','youtube.png','insta.png']
   const logit=()=> {
-    let sticky = document.getElementById('Home').offsetTop;
+    if(ScrollID){
+    let sticky = document.getElementById(ScrollID).offsetTop;
     console.info(sticky)
     if (window.pageYOffset  > sticky) {
       setScrollY('ClassTwo');
@@ -36,6 +36,7 @@ const Header = ({ siteTitle,Scroll }) => {
      TitleStyle.fontSize='4.5rem';
      TitleStyle.transition= 'all 0.3s ease-out';
     }
+  }
   }
   useEffect(() => {
     function watchScroll() {

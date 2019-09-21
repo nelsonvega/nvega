@@ -2,11 +2,12 @@ import React,{ useEffect,useState } from "react"
 import Layout from "../components/layout"
 import Home from '../components/Home/Home'
 import About from '../components/About/About'
-import OurWork from '../components/OurWork/OurWork'
+import MyWork from '../components/MyWork/MyWork'
 import ContactUS from '../components/Contactus/Contactus'
 import Vlog from '../components/Vlog/Vlog'
 import HomeBlog from '../components/HomeBlog/HomeBlog'
 import Footer from '../components/Footer'
+import Testimonials from '../components/TESTIMONIALS/TESTIMONIALS'
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -19,7 +20,9 @@ const IndexPage = () => {
      <Layout className="Index">
          <Home/>
           <About/>
-         <OurWork/>
+         <MyWork/>
+         <div className="MarginMain"/>
+         <Testimonials/>
          <Vlog/>
          <HomeBlog/>
          <ContactUS/>

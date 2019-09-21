@@ -1,0 +1,114 @@
+.ContainerTESTimominals {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.BorderBotomTest{
+    border-bottom: 2px solid #d7d7d7;
+    width: 100%;
+}
+.MainConTainerTest{
+    height: 40%;
+}
+.HeadingSlierp{
+    font-size: 23px;
+    color: #2d2e30;
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.HeadingSlier{
+    font-size: 23px;
+    color: #2d2e30;
+    margin: 0;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+.IconSTyle{
+    font-size: 2.5rem !important;
+    color:#797979;
+}
+.IconSTyle:hover{
+    color:black;
+}
+.testimonialcontent_cLASS {
+    max-width: 890px;
+    margin: 0 auto;
+}
+.SliderClassTest{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top:40px;
+}
+.testimonialcontent_cLASS p {
+    color: #8a8888;
+    font-size: 27px;
+    line-height: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.Testimonials_text {
+    color: #2d2e30;
+    text-transform: uppercase;
+    font-size: 100px;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.what_peple_say_text {
+    color: #d5b004;
+    font-size: 36px;
+    margin: 5;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+    word-spacing: 3px;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .ContainerTESTimominals{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .MainConTainerTest{
+        height: 30%;
+    }
+    .SliderClassTest {
+        height: 100%;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .testimonialcontent_cLASS p {
+        font-size: 20px;
+        line-height: 2.5rem;
+        margin: 20px;
+
+    }
+    .Testimonials_text {
+        font-size: 70px;
+        padding: 0;
+    }
+    .BorderBotomTest {
+        width: 85%;
+    }
+    .HeadingSlierp {
+        font-size: 18px;
+    }
+    .HeadingSlier {
+        font-size: 20px;
+    }
+}

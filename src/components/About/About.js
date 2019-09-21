@@ -11,7 +11,6 @@ const About = () => {
       <div className="ImageStyleGrid">
       <img className="ImageCss" src={require('../../images/my-journey_image.png')} alt="my-journey"/> 
       </div>
-    {/* <img className="ImageCss" src={require('../../images/my-journey_image.png')} alt="my-journey"/> */}
     </div>
     <div className="Container">
     <div className="Desctyle">

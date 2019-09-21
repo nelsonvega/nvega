@@ -1,12 +1,18 @@
 .HomeBlogContaninr{
-    height: 90vh;
+    height: inherit;
     background: #e7e5e5;
 }
 .HeadHomeBlog{
     margin: 0;
     font-size: 5.6rem;
 }
-
+.HomeBlogHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 0 40px 0;
+}
 .HomeBlogCard{
     height: 90%;
     width:85%;
@@ -21,11 +27,8 @@
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
 }
-.blog_thumb{
-    
-}
 .ChildThmub{
-    height: 20%;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,4 +45,36 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
+}
+.HomeBlogCardmOBILE{
+    display: none;
+}
+.AncherStyleHomeBlog{
+    width: 98%;
+    margin: 0;
+    background: #000;
+    height: 2.5rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+    .HomeBlogCard{
+      display: none;
+    }
+    .blog_thumb_image {
+        object-fit: cover;
+        height:18rem;
+    }
+    .CardStyle{
+        width: auto;
+        margin: 1rem;
+    }
+    .HomeBlogCardmOBILE{
+        display: block;
+        height: 65%;
+    }
 }

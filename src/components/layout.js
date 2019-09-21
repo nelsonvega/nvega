@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
-
+import { navigate } from "gatsby"
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -23,9 +23,13 @@ const Layout = ({ children }) => {
   `)
 const Scroll=(MenuData)=>{
   console.info(MenuData)
-  if(MenuData==="Vlog" ||MenuData==="Blog"  || MenuData==='About'||MenuData==='Our Work'||MenuData==='Home'||MenuData==='Contact'){
+  if(MenuData==="Vlog" ||MenuData==="Blog"  || MenuData==='About'||MenuData==='My Work'||MenuData==='Home'||MenuData==='Contact'){
+   if(MenuData==="Blog"){
+    navigate('/Blog')
+    return false;
+   }
     let elmnt = document.getElementById(MenuData);
-    elmnt.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+     elmnt.scrollIntoView({ behavior: 'smooth'});
   }else{
     alert('Under Progress')
   }
@@ -34,7 +38,7 @@ const Scroll=(MenuData)=>{
   return (
     <>
       <div>
-      <Header siteTitle={data.site.siteMetadata.title} Scroll={Scroll}/>
+      <Header siteTitle={data.site.siteMetadata.title} Scroll={Scroll} ScrollID={'Home'}/>
         <main>{children}</main>
       </div>
     </>

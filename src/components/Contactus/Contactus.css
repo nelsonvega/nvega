@@ -1,5 +1,5 @@
 .ContactUSContainer{
-    height: 90vh;
+    height: inherit;
 }
 .BackGroundImageContact{
     background-image: url('../../images/footer_bg.png'); 
