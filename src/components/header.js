@@ -1,6 +1,9 @@
 import React,{ useState, useEffect }  from "react"
 import Button from '@material-ui/core/Button';
 const Header = ({ siteTitle,Scroll,ScrollID}) => {
+  const OpenLink=()=>{
+    window.open("http://advanceautoworld.ca");
+   }
   console.info(ScrollID)
   const UpdateScroll=(data)=>{
     Scroll(data)
@@ -57,7 +60,7 @@ const Header = ({ siteTitle,Scroll,ScrollID}) => {
   })}
   <div style={style.MenuLogoStyle}>
   {LogoImagedata.map(ImageData=>{
-    return <img key={ImageData} alt={ImageData} style={{width:'25px',height:'25px'}} src={require(`../images/${ImageData}`)}></img>
+    return <img onClick={OpenLink} key={ImageData} alt={ImageData} style={{width:'25px',height:'25px',cursor:'pointer'}} src={require(`../images/${ImageData}`)}></img>
   })}
   </div>
   </div>
@@ -71,7 +74,7 @@ const Header = ({ siteTitle,Scroll,ScrollID}) => {
 </div>
 {ShowMenu&&
 <div id="mydiv" className="ToggleMenuMobile" style={{
-  flexDirection:'column',height:'60vh',
+  flexDirection:'column',height:'75vh',
   padding:0,
   width:'100%',background:'black',justifyContent:'center'}}>
   <div style={style.ToggleMenuStyle}>
@@ -85,7 +88,7 @@ const Header = ({ siteTitle,Scroll,ScrollID}) => {
   ,width:'100%',
   flexDirection:'row'}}>
   {LogoImagedata.map(ImageData=>{
-    return <img key={ImageData} alt={ImageData} style={{width:'25px',height:'25px'}} src={require(`../images/${ImageData}`)}></img>
+    return <img onClick={OpenLink} key={ImageData} alt={ImageData} style={{width:'25px',height:'25px',cursor:'pointer'}} src={require(`../images/${ImageData}`)}></img>
   })}
   </div>
 </div>
@@ -99,7 +102,7 @@ const style={
     justifyContent: 'space-evenly'
   },
   ToggleMenuStyle:{
-    height:'80%',display:'flex',
+    height:'85%',display:'flex',
     justifyContent:'space-evenly',
     alignItems: 'center',
     flexDirection:'column',width:'100%'

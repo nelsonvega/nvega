@@ -24,11 +24,11 @@ const BlogCard = (props) => {
     <div className="BlogListRealContent">
     <div className="HomeBlogCard">
     {ImageData.map((data,index)=>{
-     return <div   key={index.toString()} className="CardStyle">
-             <div onClick={CallBlog} style={{height:'50%'}}>
+     return <div onClick={CallBlog}   key={index.toString()} className="CardStyle">
+             <div style={{height:'50%'}}>
              <img className="blog_thumb_image"  src={require(`../images/${data.Main}`)} alt={data.Main}></img>
              </div>
-             <div onClick={CallBlog}  className="ChildThmub">
+             <div   className="ChildThmub">
              <img className="blog_thumb"  src={require(`../images/${data.ChildImage}`)} alt={data.ChildImage}></img>
              </div>
              <div style={{height:'30%',display:'flex',alignItems:'center'}}>
@@ -52,11 +52,11 @@ const BlogCard = (props) => {
      return <div key={index.toString()} style={{width:'100%'}}>
         {(index===count||props.Loop)&&
             <>
-            <div key={index.toString()} className="CardStyle">
-            <div onClick={CallBlog}  style={{height:'50%'}}>
+            <div onClick={CallBlog}  key={index.toString()} className="CardStyle">
+            <div   style={{height:'50%'}}>
             <img className="blog_thumb_image"  src={require(`../images/${data.Main}`)} alt={data.Main}></img>
             </div>
-            <div onClick={CallBlog}  className="ChildThmub">
+            <div  className="ChildThmub">
             <img className="blog_thumb"  src={require(`../images/${data.ChildImage}`)} alt={data.ChildImage}></img>
             </div>
             <div style={{height:'6rem',display:'flex',

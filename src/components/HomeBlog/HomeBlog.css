@@ -65,6 +65,9 @@
     .HomeBlogCard{
       display: none;
     }
+    .HeadHomeBlog{
+        font-size: 4rem;
+    }
     .blog_thumb_image {
         object-fit: cover;
         height:18rem;

@@ -41,6 +41,9 @@
     justify-content: flex-start;
     align-items: center;
 }
+.MuiDialog-paperWidthSm {
+  width: 22rem;
+}
 .MainBodyBolgList{
   width:80%;
 }
@@ -263,7 +266,7 @@ flex-direction: row
     align-items: center;
 }
 .MarginMain{
-  height: 20vh;
+  height: 80px;
   background: #f2f1f1;
 }
 /* Extra small devices (phones, 600px and down) */
@@ -392,6 +395,7 @@ flex-direction: row
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+
    .ClassOne{
     height: 18vh;
   }
@@ -401,11 +405,20 @@ flex-direction: row
   .BlogText{
     font-size: 4rem;
   }
- 
+  .MarginMain{
+    display: none;
+  }
   .FooterStyle{
    padding: 1rem;
    margin: 0;
    font-family: 'Open Sans', sans-serif;
   }
 }
+
+
+
+
+
+
+
 

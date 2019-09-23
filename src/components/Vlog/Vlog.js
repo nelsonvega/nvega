@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Vlog.css'
 import VLog from '../VlogCard'
-import {NavigateNext,NavigateBefore} from '@material-ui/icons';
 const Vlog = () => {
-  const [count, setCount] = useState(0);
   return (
     <div className="VlogContiner" id="Vlog">
        <div style={{display: 'flex',
@@ -16,37 +14,11 @@ const Vlog = () => {
        </div>
        <div className="SlidervLOG">
        {['Huma.jpg','vlog.png','vlog_two.png'].map((data,index)=>{
-         let  bg=require(`../../images/${data}`);
          return <div key={index.toString()}  style={{width: '100%'}}>
-                  {(index===count)&&
-                  <>
-                    
-           <div style={{
-            backgroundSize:'cover',
-            backgroundImage: "url("+bg+")", 
-            height:270,width:'100%'}}>
-            <div style={{display:'flex',flexDirection:'row',width:'100%',height:'100%'}}>
-            <div className="ButtonVlogStyle">
-            {(index!==0)&&
-              <NavigateBefore onClick={() => setCount(count-1)} className="IconSTyleVlog"/>
-            }
-            </div>
-            <div style={{width:'80%'}}>
-            <div className="ContentStyleMobileVlog">
-            <p className="date">June 10, 2019</p>
-            <p className="short_desc">If you need to say sorry to somone -Watch this</p>
-            </div>
-            </div>
-            <div className="ButtonVlogStyle">
-            {(index!==2)&&
-              <NavigateNext onClick={() => setCount(count+1)}  className="IconSTyleVlog"/>
-            }
-            </div>
-            </div>
-       
-           </div>
-                  </>
-                   }
+              <div style={{margin:'1rem'}}>
+              <VLog ImageName={data}/>
+              </div>
+                   
               </div>
        })
       }

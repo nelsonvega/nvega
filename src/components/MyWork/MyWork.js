@@ -1,7 +1,11 @@
 import React from 'react'
 import './MyWork.css'
 import Card from '@material-ui/core/Card';
+import GraphMywork from '../GraphMyWork/GraphMywork'
 const Mywork = () => {
+  const OpenWeb=()=>{
+    window.open("https://www.google.com/");
+  }
   return (
     <div className="MobileMyWork" id="My Work">
         <div style={{height:'100%',
@@ -20,7 +24,9 @@ const Mywork = () => {
             </p>
          </div>
          <div className="GrpahStyle">
-         <img alt="my_work.png" className="ImageStyleWork" src={require('../../images/my_work.png')}></img>
+           <div className="ImageStyleWork">
+           <GraphMywork/>
+           </div>
          </div>
          <div className="MyworkBlogTYpe"> 
            {[
@@ -28,7 +34,7 @@ const Mywork = () => {
              {Name:'mobile_blog_blog_two.png',Text:'Mannul Book'},
              {Name:'mobile_blog_blog_three.png',Text:'Fast Services'},
            ].map(data=>{
-              return   <Card key={data.Name} style={{margin:5}}>
+              return   <Card onClick={OpenWeb}  key={data.Name} style={{margin:5}}>
               <div style={{height:'40vh',display: 'flex',flexDirection:'column',margin:'1rem'}}>
                   <div style={{height:'100%'}}>
                        <img width={'100%'} alt={data} src={require(`../../images/${data.Name}`)}></img>
@@ -50,18 +56,6 @@ const Mywork = () => {
 export default Mywork;
 
 
-// <div style={{height:'100%',width:'100%',
-// flexDirection:'column',display:'flex'}}>
-// <div style={{height:'20%'}}>
-//     <h3 className="my_work">
-//        MY WORK
-//     </h3>
-// </div>
-// <div 
-// style={{height:'30%',backgroundColor:'black',width:'60%'}}>
-// I think the greatest reward in my life is the
-//  opportunity to add value to lives of others. 
-//  In the course of doing so many have been kind to recognize some of my endeavors.
-// </div>
+// <img alt="my_work.png" className="ImageStyleWork" src={require('../../images/my_work.png')}></img>
 
-// </div>
+

@@ -13,7 +13,7 @@ const Footer = () => {
 }
 const style={
 footer:{
-    height: '25vh',
+    height: '20vh',
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',

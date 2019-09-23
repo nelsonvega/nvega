@@ -3,7 +3,7 @@ import Dialog from '@material-ui/core/Dialog';
 import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import {AccountCircle,Email,Phone,Send} from '@material-ui/icons';
+import {AccountCircle,Email,Phone,Send,Message} from '@material-ui/icons';
 import Button from '@material-ui/core/Button';
 const componCotactUs = (props) => {
   return (
@@ -16,14 +16,14 @@ const componCotactUs = (props) => {
       >
         <div style={{display:'flex',flexDirection:'column'}}>
             <div style={{height:'7vh',
-            background:'black',
+            background:'#b87106',
             color:'white',
             justifyContent:'center',
             alignItems:'center',
             display:'flex',
             flexDirection:'row'}}>
       <div style={{width:'90%',textAlign:'center'}}>
-          <strong style={{fontSize:'2rem',marginLeft:'5%'}}>BOOK A SITE VISIT</strong>
+          <strong style={{fontSize:'1.7rem',marginLeft:'5%'}}>GET IN TOUCH WITH US</strong>
       </div>
       <div style={{width:'10%'}}>
           <CloseIcon onClick={props.Close}/>
@@ -77,8 +77,24 @@ const componCotactUs = (props) => {
         }}
       />
         </div>
+        <div>
+        <TextField
+          multiline
+          rowsMax="3"
+        style={{margin:'5%',width:'90%'}}
+        id="input-with-icon-textfield"
+        label="Message  (Required)"
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <Message />
+            </InputAdornment>
+          ),
+        }}
+      />
+        </div>
         <div style={{height:'8vh',display:'flex',justifyContent:'center'}}>
-        <Button style={{height:'40px',background:'black'}} variant="contained">
+        <Button style={{height:'40px',background:'#b87106'}} variant="contained">
         <strong style={{fontSize:'1rem',color:'white'}}>Send Message</strong>
         <Send style={{marginLeft:'20px',color:'white'}}/>
       </Button>

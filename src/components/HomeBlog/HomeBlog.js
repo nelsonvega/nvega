@@ -11,7 +11,7 @@ const HomeBlog = () => {
        <h3 style={{margin:0,fontSize:'2.2rem',color:'#d5b004'}}>FEATURED ARTICLE FROM THE</h3>
        <h1 className="HeadHomeBlog">Blog</h1>
        </div>
-       <BlogCard/>
+       <BlogCard Loop={true}/>
        <div style={{height:'10vh',background:'#e7e5e5'}}></div>
        </div>
        </div>

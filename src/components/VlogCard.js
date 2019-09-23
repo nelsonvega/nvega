@@ -27,11 +27,7 @@ const styles = theme => ({
           position: 'absolute',
           top: '10%',
           left: '50%',
-        },
-
-    media: {
-        height: 270
-    },
+        }
   })
 
 const Header=(props)=> {
@@ -43,7 +39,7 @@ const Header=(props)=> {
                       <div style={{position: 'relative'}} >
                         <CardMedia
                             component="img"
-                            className={[classes.media,'ImageHover']}
+                            className='ImageHover'
                             image={require(`../images/${props.ImageName}`)}
                         />
                         <div style={{position: 'absolute',
