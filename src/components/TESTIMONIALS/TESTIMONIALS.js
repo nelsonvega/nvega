@@ -1,9 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './TESTIMONIALS.css'
 import {NavigateNext,NavigateBefore} from '@material-ui/icons';
 const TESTIMONIALS = () => {
-  const TranformLeft=()=>{
-    let fadeTarget=document.getElementById('HeadingSlierp');
+  const [count, setCount] = useState(0);
+  let interval = setInterval(() => {
+  TranformLeft('Right')
+  }, 3000);
+  const TranformLeft=(Type)=>{
+    let fadeTarget=document.getElementById("HeadingSlierpSlider");
+    clearInterval(interval);  
     const fadeEffect = setInterval(function () {
       if (!fadeTarget.style.opacity) {
           fadeTarget.style.opacity = 1;
@@ -13,8 +18,21 @@ const TESTIMONIALS = () => {
       } else {
           clearInterval(fadeEffect);
           fadeTarget.style.opacity=1
+          if(Type==='Right'){
+            if(count===2){
+              setCount(0)
+            }else{
+                 setCount(count+1)
+            }
+          }else{
+            if(count===0){
+              setCount(2)
+            }else{
+              setCount(count-1)
+            }
+          }
       }
-    }, 50);
+    }, 80); 
   }
   return (
     <div style={{width:'100%',
@@ -42,27 +60,55 @@ const TESTIMONIALS = () => {
         <div className="SliderClassTest">
         <div style={{width:'20%'}}>
         <div className="NextTest">
-        <NavigateBefore onClick={TranformLeft} className="IconSTyle"/>
+       
+          <NavigateBefore onClick={()=>TranformLeft('Left')} className="IconSTyle"/>
+        
+        
         </div>
         </div>
 
-        <div style={{width:'90%',display: 'flex',
+        <div id="sliderEffect" style={{width:'90%',display: 'flex',
          alignItems:'center',
          textAlign:'center',
          flexDirection: 'column',
         justifyContent:'center'}}>
-        <div id="HeadingSlierp">
-        <h5 className="HeadingSlier">Hrishikesh Mafatlal</h5>
-      
-        <p className="HeadingSlierp">Vice chairman & the Chief Executive of the Arvind Mafatlal Group of Companies</p>
-      
-        <div>
-        <img alt="testimonial.png"  src={require('../../images/testimonial.png')}></img>
-        </div>
-        </div>
+      {[{
+        index:0,
+        User:'Hrishikesh Mafatlal',
+        Text:'Vice chairman & the Chief Executive of the Arvind Mafatlal Group of Companies'
+      },
+      {
+        index:1,
+        User:'Lorem Ipsum',
+        Text:'In Informatics, dummy data is benign information that does not contain any useful data.'
+      },
+      {
+        index:2,
+        User:'Lorem Data',
+        Text:'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+      },
+    ].map(data=>{
+      let Image=require('../../images/testimonial.png');
+        if(count===data.index){
+          return   <div key={data.toString()} 
+          id="HeadingSlierpSlider">
+          <h5 className="HeadingSlier">{data.User}</h5>
+        
+          <p className="HeadingSlierp">{data.Text}</p>
+        
+          <div>
+          <img alt="testimonial.png"  src={Image}></img>
+          </div>
+          </div>
+        }else{
+          return null;
+        }
+      })}
         </div>
         <div style={{width:'20%',display: 'flex',justifyContent:'flex-end'}}>
-        <NavigateNext onClick={TranformLeft} className="IconSTyle"/>
+      
+          <NavigateNext onClick={()=>TranformLeft('Right')} className="IconSTyle"/>
+        
         </div>
         </div>
     </div>

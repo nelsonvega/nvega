@@ -40,9 +40,6 @@
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
 }
-.ImageHover{
-    height: 270px;
-}
 .ImageHover:hover{
     transform: scale(1.1);
     transition: .9s all;
