@@ -1,0 +1,280 @@
+.grpah_section {
+	padding: 80px 5px;
+    background: #262626;
+}
+
+.outer_graph_desktop {
+	width: 1051px;
+	height: 430px;
+	position: relative;
+}
+
+.circle_common {
+	z-index: 0;
+	width: 88px;
+	height: 88px;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.circle_common:focus {
+	outline: 0;
+}
+
+.circle1 {
+	background: #3e3e3e;
+	left: 116px;
+	background-image: url(../../images/briefcase.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	bottom: 0;
+}
+
+.circle1-text {
+	position: absolute;
+	bottom: 120px;
+	left: -117px;
+	width: 138px;
+	text-align: right;
+}
+
+.contentone {
+	font-size: 14px;
+	color: #9c9a9a;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.headone {
+	color: #3e3e3e;
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 10px;
+}
+
+.circle1::before {
+	background: url(../../images/tower1.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	right: 33px;
+	bottom: 100%;
+	height: 148px;
+	width: 18px;
+	z-index: 9;
+}
+
+.circle1::after {
+	background: url(../../images/sky1.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	height: 148px;
+	width: 158px;
+	left: 31px;
+	top: -79px;
+}
+
+.circle2-text {
+	position: absolute;
+	bottom: 142px;
+	left: -117px;
+	width: 138px;
+	text-align: right;
+}
+
+.circle2 {
+	background: #41b6e4;
+	left: 260px;
+	background-image: url(../../images/brief2.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	bottom: 88px;
+}
+
+.circle2::before {
+	background: url(../../images/tower2.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	right: 33px;
+	bottom: 100%;
+	height: 148px;
+	width: 18px;
+}
+
+.circle2::after {
+	background: url(../../images/sky2.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	height: 148px;
+	width: 158px;
+	left: 45px;
+	top: -2px;
+}
+
+.circle3-text {
+	position: absolute;
+	bottom: 227px;
+	left: -117px;
+	width: 138px;
+	text-align: right;
+}
+
+.circle3 {
+	background: #09ab9b;
+	left: 416px;
+	background-image: url(../../images/brief3.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	bottom: 88px;
+}
+
+.circle3::before {
+	background: url(../../images/tower3.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	right: 33px;
+	bottom: 100%;
+	height: 241px;
+	width: 18px;
+	z-index: 9;
+}
+
+.circle3::after {
+	background: url(../../images/sky3.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	height: 175px;
+	width: 205px;
+	left: 29px;
+	top: -82px;
+}
+
+.circle4-text {
+	position: absolute;
+	width: 138px;
+	text-align: left;
+	top: 211px;
+	left: 66px;
+}
+
+.circle4 {
+	background: #f6dd85;
+	left: 560px;
+	background-image: url(../../images/brief4.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	bottom: 176px;
+}
+
+.circle4::before {
+	background: url(../../images/tower4.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	right: 33px;
+	height: 170px;
+	width: 18px;
+	top: 65px;
+}
+
+.circle4::after {
+	background: url(../../images/sky4.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	height: 94px;
+	width: 158px;
+	left: 44px;
+	top: -3px;
+}
+
+.circle5-text {
+	position: absolute;
+	width: 138px;
+	text-align: left;
+	top: 131px;
+	left: 66px;
+}
+
+.circle5 {
+	background: #f28d31;
+	left: 717px;
+	background-image: url(../../images/brief5.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	bottom: 176px;
+}
+
+.circle5::before {
+	background: url(../../images/tower5.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	right: 33px;
+	height: 170px;
+	width: 18px;
+	top: 65px;
+}
+
+.circle5::after {
+	background: url(../../images/sky5.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	height: 175px;
+	width: 205px;
+	left: 29px;
+	top: -82px;
+}
+
+.circle6-text {
+	position: absolute;
+	width: 138px;
+	text-align: left;
+	top: 131px;
+	left: 66px;
+}
+
+.circle6 {
+	background: #c62127;
+	right: 103px;
+	background-image: url(../../images/brief6.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	bottom: 264px;
+}
+
+.circle6::before {
+	background: url(../../images/tower6.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	right: 33px;
+	height: 170px;
+	width: 18px;
+	top: 65px;
+}
+
+.success_last {
+	color: #c62127;
+}
+
+.sales_formula {
+	color: #f28d31;
+}
+
+.data_client {
+	color: #f6dd85;
+}
+
+.fast_services {
+	color: #09ab9b;
+}
+
+.book {
+	color: #f28d31;
+}
