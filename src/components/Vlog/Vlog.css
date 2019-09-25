@@ -8,6 +8,9 @@
 .VlogHeadingText{
    margin: 80px 0 40px 0;
 }
+.MuiCardContent-root:last-child {
+    padding: 0px !important;
+}
 .buttoncontent{
     display: flex;
     justify-content: center;

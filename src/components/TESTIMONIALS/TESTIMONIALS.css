@@ -10,22 +10,39 @@
     border-bottom: 2px solid #d7d7d7;
     width: 100%;
 }
+.carousel-control-next-icon{
+    color:black
+}
 .MainConTainerTest{
     height: 40%;
+}
+.SliderReact{
+    text-align: center;
+    margin: 1rem;
 }
 .HeadingSlierp{
     font-size: 23px;
     color: #2d2e30;
-    font-weight: 400;
+    font-weight:bold;
+    margin: 5px;
     font-style: italic;
     font-family: 'Open Sans', sans-serif;
-
 }
+.carousel-item .HeadingSlierp {
+    font-weight: 400;
+}
+.carousel-item{
+    width: 70% !important;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+.carousel-item img{
+    margin-top:10px;
+    }
 .HeadingSlier{
     font-size: 23px;
     color: #2d2e30;
-    margin: 0;
-    font-weight: 600;
+    margin: 5px;
     font-family: 'Open Sans', sans-serif;
 }
 .IconSTyle{

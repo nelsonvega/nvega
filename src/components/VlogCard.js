@@ -9,6 +9,8 @@ const styles = theme => ({
       },
       content: {
         flex: '1 0 auto',
+        margin: 0,
+        padding: 0
       },
       cover: {
         width: 151,

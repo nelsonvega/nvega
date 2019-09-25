@@ -140,7 +140,7 @@
 .ToggleMenu{
   display: none;
 }
-.container {
+.ContainerMain {
   display: inline-block;
   cursor: pointer;
 }

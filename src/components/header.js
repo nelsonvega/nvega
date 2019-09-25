@@ -65,7 +65,7 @@ const Header = ({ siteTitle,Scroll,ScrollID}) => {
   </div>
   </div>
   <div className="ToggleMenu">
-  <div id="container" className="container" onClick={MenuFxn}>
+  <div id="containermain" className="containermain" onClick={MenuFxn}>
   <div className="bar1"></div>
   <div className="bar2"></div>
   <div className="bar3"></div>

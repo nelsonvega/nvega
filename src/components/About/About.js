@@ -7,12 +7,12 @@ const About = () => {
     <div className="AboutContiner" id="About">
     <SEO title="About Us" />
     <div className="GridAlign">
-    <div className="Container">
+    <div className="ContainerMain">
       <div className="ImageStyleGrid">
       <img className="ImageCss" src={require('../../images/my-journey_image.png')} alt="my-journey"/> 
       </div>
     </div>
-    <div className="Container">
+    <div className="ContainerMain">
     <div className="Desctyle">
       <h3 className="HeadingJourny">MY Journey</h3>
        <p className="desc-content">It's not every day that you visit a monk's

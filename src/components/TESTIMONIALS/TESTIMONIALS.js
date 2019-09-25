@@ -1,39 +1,21 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import './TESTIMONIALS.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from 'react-bootstrap/Carousel'
 import {NavigateNext,NavigateBefore} from '@material-ui/icons';
 const TESTIMONIALS = () => {
   const [count, setCount] = useState(0);
-  let interval = setInterval(() => {
-  TranformLeft('Right')
-  }, 3000);
-  const TranformLeft=(Type)=>{
-    let fadeTarget=document.getElementById("HeadingSlierpSlider");
-    clearInterval(interval);  
-    const fadeEffect = setInterval(function () {
-      if (!fadeTarget.style.opacity) {
-          fadeTarget.style.opacity = 1;
-      }
-      if (fadeTarget.style.opacity > 0) {
-          fadeTarget.style.opacity -= 0.1;
-      } else {
-          clearInterval(fadeEffect);
-          fadeTarget.style.opacity=1
-          if(Type==='Right'){
-            if(count===2){
-              setCount(0)
-            }else{
-                 setCount(count+1)
-            }
-          }else{
-            if(count===0){
-              setCount(2)
-            }else{
-              setCount(count-1)
-            }
-          }
-      }
-    }, 80); 
-  }
+  const [direction, setDirection] = useState(null);
+  const handleSelect = (selectedIndex, e) => {
+    setCount(selectedIndex);
+    setDirection(e.direction);
+  };
+useEffect(() => {
+    setTimeout(() => {
+      setCount(0);
+    }, 3000);
+}, [])
+const DataSlide=[0,1,2]
   return (
     <div style={{width:'100%',
     justifyContent:'center',
@@ -56,66 +38,61 @@ const TESTIMONIALS = () => {
                 a hazardous occupation, here comes a refreshingly simple yet effective
                 guide to improving our lives and reducing stress"
         </p>
-        </div>
-        <div className="SliderClassTest">
-        <div style={{width:'20%'}}>
-        <div className="NextTest">
-       
-          <NavigateBefore onClick={()=>TranformLeft('Left')} className="IconSTyle"/>
-        
-        
-        </div>
+        </div> 
+        <div style={{width:'100%'}}>
+         <Carousel 
+         interval={3000}
+        indicators={false} activeIndex={count} direction={direction} onSelect={handleSelect}
+        nextIcon={<NavigateNext className="IconSTyle"/>}
+        prevIcon={<NavigateBefore className="IconSTyle"/>}
+        >
+         {DataSlide.map(Data=>{
+          let Image=require('../../images/testimonial.png');
+           return <div key={Data.toString()} className="SliderReact">
+          <div>
+          <strong className="HeadingSlier">Hrishikesh Mafatlal</strong>
+          </div> 
+           <div>
+           <p className="HeadingSlierp">Vice chairman & the Chief Executive of the Arvind Mafatlal Group of Companies</p>
+           </div>
+           <div>
+           <img alt="testimonial.png"  src={Image}></img>
+           </div>
+            </div>
+         })
+         }     
+        </Carousel>
         </div>
 
-        <div id="sliderEffect" style={{width:'90%',display: 'flex',
-         alignItems:'center',
-         textAlign:'center',
-         flexDirection: 'column',
-        justifyContent:'center'}}>
-      {[{
-        index:0,
-        User:'Hrishikesh Mafatlal',
-        Text:'Vice chairman & the Chief Executive of the Arvind Mafatlal Group of Companies'
-      },
-      {
-        index:1,
-        User:'Lorem Ipsum',
-        Text:'In Informatics, dummy data is benign information that does not contain any useful data.'
-      },
-      {
-        index:2,
-        User:'Lorem Data',
-        Text:'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
-      },
-    ].map(data=>{
-      let Image=require('../../images/testimonial.png');
-        if(count===data.index){
-          return   <div key={data.toString()} 
-          id="HeadingSlierpSlider">
-          <h5 className="HeadingSlier">{data.User}</h5>
-        
-          <p className="HeadingSlierp">{data.Text}</p>
-        
-          <div>
-          <img alt="testimonial.png"  src={Image}></img>
-          </div>
-          </div>
-        }else{
-          return null;
-        }
-      })}
-        </div>
-        <div style={{width:'20%',display: 'flex',justifyContent:'flex-end'}}>
-      
-          <NavigateNext onClick={()=>TranformLeft('Right')} className="IconSTyle"/>
-        
-        </div>
-        </div>
+ 
     </div>
     </div>
   )
 }
 
 export default TESTIMONIALS
+
+// <div style={{width:'100%'}}>
+// <Carousel 
+// nextIcon={<NavigateNext className="IconSTyle"/>}
+// prevIcon={<NavigateBefore className="IconSTyle"/>}
+// indicators={false} activeIndex={count} direction={direction} onSelect={handleSelect}>
+// {DataSlide.map(DataList=>{
+// let Image=require('../../images/testimonial.png');
+// return    <Carousel.Item>
+// <div style={{display:'flex',
+// alignItems:'center',
+// justifyContent:'center',flexDirection:'column'}}>
+// <h5 className="HeadingSlier">{'Hrishikesh Mafatlal'}</h5>
+// <p className="HeadingSlierp">{'Vice chairman & the Chief Executive of the Arvind Mafatlal Group of Companies'}</p>
+// <div>
+// <img alt="testimonial.png"  src={Image}></img>
+// </div>
+// </div>
+// </Carousel.Item>
+// })
+// }
+// </Carousel>
+// </div>
 
 
