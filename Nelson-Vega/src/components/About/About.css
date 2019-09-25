@@ -1,0 +1,95 @@
+.AboutContiner{
+    height: inherit;
+}
+.GridAlign{
+    display: flex;
+    background: #f2f1f1;
+    justify-content: center;
+    padding: 5rem;
+}
+.ContainerMain{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+}
+.HeadingJourny{
+    font-size: 100px;
+    margin: 0;
+}
+.ImageStyle{
+    text-align: center;
+    width: 40%;
+}
+.Desctyle{
+    text-align: start;
+    height: 90%;
+    padding: 2rem;
+}
+.desc-content {
+    color: #959696;
+    text-align: left;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    padding-right: 20px;
+    line-height: 34px;
+    margin-bottom: 0px;
+}
+.ImageCss{
+    width:90%;
+    object-fit: contain;
+}
+.ImageStyleGrid{
+    width: 90%;
+    align-items: center;
+    justify-content: flex-end;
+}
+@media only screen and (max-width: 600px) {
+    .ImageStyleGrid{
+        width: 100%;
+        justify-content: center;
+        height: 100%;
+        display: flex;
+    }
+     .GridAlign{
+        flex-direction: column;
+        padding:5rem 0rem 2rem 0;
+      }    
+    .ContainerMain{
+        flex-direction: column;
+        height: 100%;
+         width: 100%;
+    }
+    .ImageStyle{
+        text-align: center;
+        width: 70%;
+    }
+    .ImageCss{
+        width:70%
+    }
+    .HeadingJourny{
+        font-size: 3rem;
+        padding-left: 2rem;
+    }
+    .Desctyle {
+        text-align: center;
+        padding-left: 0px;
+        width: 100%;
+        padding: 0;
+        height: 100%;
+    }
+    .desc-content {
+        color: #959696;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+        padding-left: 20px;
+        margin-bottom: 0px;
+         padding-bottom: 0px; 
+    }
+}
