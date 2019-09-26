@@ -31,9 +31,10 @@ const IndexPage = () => {
      )
 }else{
   return (<div className="Loding">
-         <strong style={{color:'white',fontSize:'2rem'}}>Loading....</strong>
+        <img alt="Loading" style={{width:100,height:100}} src={require('../images/gatsby-icon.png')}></img>
           </div>)
 }
 }
 
 export default IndexPage
+//  
