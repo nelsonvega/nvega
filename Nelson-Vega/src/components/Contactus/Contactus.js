@@ -15,11 +15,11 @@ const Contactus = () => {
              <div style={{display:'flex',justifyContent:'center',alignItems: 'center'}}>
             <div className="ContentContcact">
                <div>
-                 <h6 className="Heading">Looking for a mentor & speaker ?</h6> 
+                 <h6 className="Heading">Looking For An Engineer?</h6> 
                </div>
                <div>
                    <p className="fontstyledesc">
-              Wheather you're hosting an event or looking for someone to help your team accelerate their performance, get in touch to learn more.
+              If you are someone who has an idea to start a digital product, or an established business looking forward to going online, or just someone who wishes to accelerate your team’s performance, I have a solution.
                    </p>
                </div>
                <div>

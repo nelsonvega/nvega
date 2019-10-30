@@ -14,21 +14,12 @@ const About = () => {
     </div>
     <div className="ContainerMain">
     <div className="Desctyle">
-      <h3 className="HeadingJourny">MY Journey</h3>
-       <p className="desc-content">It's not every day that you visit a monk's
-           website. I want to thank you for being here! I
-           have been a practicing monk for twenty-
-           three years, trying to understand the deeper
-           aspects of the human condition: our
-           relationships, our happiness and our purpose.
-       </p>
-        <p className="desc-content">
-           Today i am a storyteller, life coach, author
-           and a friend to millions that are following my
-           journey on social media. My videos have
-           reached over 500 million views and are all
-           focused on one thing: Making a difference!
-     </p>
+		<h3 className="HeadingJourny">MY Journey</h3>
+		<p className="desc-content"><i>Transformation is an ongoing process that tends to appear ordinary when in fact, something extraordinary is taking place. </i></p>
+		<p className="desc-content">Hi! I am Nelson Vega. Thank you for taking the time out to know more about me.</p>
+        <p className="desc-content">Originally from Cuba, I moved to the States in 2004, at the age of __. Interest in Information Technology since early childhood helped me pursue Software Engineering and mold into a coder at a young age. As an avid reader and explorer, my constant source of inspiration has been books and people. </p>
+		<p className="desc-content">While sixteen years of Programming displayed my skills massively onto my resume, there was always this void I felt when it came to pursuing my passion - the zeal to help people and businesses grow. </p>
+		<p className="desc-content">Today, I work as an Entrepreneur, and Life Coach to start-ups, established companies, or people; all intended towards one goal- making a difference. You can take a look at some of my personal favorite work here. (mobileappengine, kleio, codertoentrepreneur).</p>
       </div>
     </div>
     </div>

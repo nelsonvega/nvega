@@ -22,7 +22,7 @@ const Header = ({ siteTitle,Scroll,ScrollID}) => {
    e.currentTarget.classList.toggle("change");
    setShowMenu(ShowMenu=!ShowMenu)
   }
-  const MenuData=['Home','About','My Work','Vlog','Blog','Contact']
+  const MenuData=['Home','About','My Work','Blog','Contact']
   const LogoImagedata=['facebook.png','twitter.png','youtube.png','insta.png']
   const logit=()=> {
     if(ScrollID){

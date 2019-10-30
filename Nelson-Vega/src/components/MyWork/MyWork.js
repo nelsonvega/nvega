@@ -17,10 +17,7 @@ const Mywork = () => {
          </div>
          <div>
             <p className="ithin_para">
-            I think the greatest reward in my life is the opportunity 
-            to add value to lives of others. 
-            In the course of doing so many have been kind to recognize some of my 
-            endeavors.
+            With a rich background in coding, a certification in Mobile app development, and MS Developer, I have had the privilege to create a difference in a good number of businesses and peoples lives.
             </p>
          </div>
          <div className="GrpahStyle">
