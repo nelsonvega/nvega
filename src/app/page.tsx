@@ -1,101 +1,133 @@
-import Image from "next/image";
+// app/profile/page.tsx
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
 
-export default function Home() {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconName, IconPrefix, findIconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+
+type Data = {
+  profile: {
+    username: string;
+    name: string;
+    bio: string;
+    avatar_url: string;
+  };
+  social_links: Array<{
+    platform: string;
+    url: string;
+    icon_url: string;
+  }>;
+  links: Array<{
+    title: string;
+    url: string;
+    thumbnail_url: string;
+  }>;
+  appearance: {
+    background_color: string;
+    button_color: string;
+    font_color: string;
+    font_style: string;
+    button_shape: string;
+  };
+  analytics: {
+    clicks: number;
+    impressions: number;
+  };
+};
+
+const ProfilePage = async () => {
+  const filePath = path.join(process.cwd(), 'src/app/data.json');
+  const jsonData = fs.readFileSync(filePath, 'utf8');
+  const data: Data = JSON.parse(jsonData);
+
+  const { profile, social_links, links, appearance } = data;
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex flex-col items-center min-h-screen" style={{ backgroundColor: appearance.background_color, color: appearance.font_color, fontFamily: appearance.font_style }}>
+      {/* Profile Header */}
+      <section className="flex flex-col items-center text-center py-8">
+        <img src={profile.avatar_url} alt={`${profile.name}'s avatar`} className="w-24 h-24 rounded-full mb-4" />
+        <h1 className="text-2xl font-semibold">{profile.name}</h1>
+        <p className="text-sm mt-2">{profile.bio}</p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      {/* Social Links */}
+      <section className="flex gap-4 mt-4 mb-8">
+        {social_links.map((link) => (
+          <a key={link.platform} href={link.url} target="_blank" rel="noopener noreferrer">
+            <img src={link.icon_url} alt={`${link.platform} icon`} className="w-8 h-8" />
+          </a>
+        ))}
+      </section>
+
+      <section className="flex gap-4 mt-4 mb-8">
+        {social_links.map((link) => {
+          const iconName = link.platform.toLowerCase() as IconName;
+          const iconDefinition = findIconDefinition({ prefix: 'fab' as IconPrefix, iconName });
+          
+          return (
+            <a key={link.platform} href={link.url} target="_blank" rel="noopener noreferrer">
+              {iconDefinition ? (
+                <FontAwesomeIcon icon={iconDefinition} className="w-8 h-8" />
+              ) : (
+                <img src={link.icon_url} alt={`${link.platform} icon`} className="w-8 h-8" />
+              )}
+            </a>
+          );
+        })}
+      </section>
+
+      {/* Linktree-style Links */}
+      <section className="w-full max-w-md flex flex-col gap-4 px-4">
+        {links.map((link) => (
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            key={link.title}
+            href={link.url}
             target="_blank"
             rel="noopener noreferrer"
+            className={`flex items-center p-4 rounded-lg shadow-md transition-transform hover:scale-105`}
+            style={{
+              backgroundColor: appearance.button_color,
+              color: appearance.background_color,
+              borderRadius: appearance.button_shape === 'rounded' ? '0.75rem' : '0px',
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            <img src={link.thumbnail_url} alt={`${link.title} thumbnail`} className="w-12 h-12 mr-4 rounded-md" />
+            <span className="font-medium text-lg">{link.title}</span>
           </a>
+        ))}
+      </section>
+
+      {/* Linktree-style Links */}
+      <section className="w-full max-w-md flex flex-col gap-4 px-4">
+        {links.map((link) => (
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            key={link.title}
+            href={link.url}
             target="_blank"
             rel="noopener noreferrer"
+            className={`flex items-center p-4 rounded-lg shadow-md transition-transform hover:scale-105`}
+            style={{
+              backgroundColor: appearance.button_color,
+              color: appearance.background_color,
+              borderRadius: appearance.button_shape === 'rounded' ? '0.75rem' : '0px',
+            }}
           >
-            Read our docs
+            <img src={link.thumbnail_url} alt={`${link.title} thumbnail`} className="w-12 h-12 mr-4 rounded-md" />
+            <span className="font-medium text-lg">{link.title}</span>
           </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        ))}
+      </section>
+
+      {/* Footer or Analytics */}
+      <footer className="mt-8 text-center text-xs text-gray-500">
+        <p>Clicks: {data.analytics.clicks} | Impressions: {data.analytics.impressions}</p>
       </footer>
     </div>
   );
-}
+};
+
+export default ProfilePage;
