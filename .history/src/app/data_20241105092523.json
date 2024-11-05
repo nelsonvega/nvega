@@ -1,0 +1,59 @@
+{
+    "profile": {
+      "username": "your_username",
+      "name": "Your Name",
+      "bio": "Your bio goes here",
+      "avatar_url": "https://example.com/avatar.jpg"
+    },
+    "social_links": [
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/yourprofile",
+        "icon_url": "https://example.com/instagram-icon.png"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/yourprofile",
+        "icon_url": "https://example.com/twitter-icon.png"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/yourprofile",
+        "icon_url": "https://example.com/linkedin-icon.png"
+      }
+    ],
+    "links": [
+      {
+        "title": "My Portfolio",
+        "url": "https://yourportfolio.com",
+        "thumbnail_url": "https://example.com/portfolio-thumbnail.jpg"
+      },
+      {
+        "title": "Blog",
+        "url": "https://yourblog.com",
+        "thumbnail_url": "https://example.com/blog-thumbnail.jpg"
+      },
+      {
+        "title": "Subscribe to Newsletter",
+        "url": "https://yoursubscribe.com",
+        "thumbnail_url": "https://example.com/newsletter-thumbnail.jpg"
+      },
+      {
+        "title": "Support Me",
+        "url": "https://yourpatreon.com",
+        "thumbnail_url": "https://example.com/patreon-thumbnail.jpg"
+      }
+    ],
+    "appearance": {
+      "background_color": "#FFFFFF",
+      "button_color": "#000000",
+      "font_color": "#333333",
+      "font_style": "Arial",
+      "button_shape": "rounded"
+    },
+    "analytics": {
+      "clicks": 0,
+      "impressions": 0
+    }
+  }
+  
